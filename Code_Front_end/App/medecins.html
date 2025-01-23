@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Gestion des Médecins</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <!-- font awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- owl carousel -->
+         
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- custom css -->
+         
+        <link rel = "stylesheet" href = "assets/css/main.css" />
+        <link rel = "stylesheet" href = "assets/css/utilities.css" />
+        <!-- normalize.css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+
+<style>
+
+input, button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+</style>
+
+
+
+    </head>
+    <body>
+        
+        <div class="page-wrapper">
+            <!-- header -->
+            <header class = "header">
+                <nav class = "navbar">
+                    <div class="container">
+                        <div class="navbar-content d-flex justify-content-between align-items-center">
+                            <div class = "brand-and-toggler d-flex align-items-center justify-content-between">
+                                <a href = "#" class = "navbar-brand d-flex align-items-center">
+                                    <span class="brand-shape d-inline-block text-white">GC</span>
+                                    <span class="brand-text fw-7">Gestion Clinique</span>
+                                </a>
+                                <button type = "button" class = "d-none navbar-show-btn">
+                                    <i class = "fas fa-bars"></i>
+                                </button>
+                            </div>
+
+                            <div class = "navbar-box">
+                                <button type = "button" class = "navbar-hide-btn">
+                                    <i class = "fas fa-times"></i>
+                                </button>
+
+                               
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class="element-one">
+                    <img src = "assets/images/element-img-1.png" alt = "">
+                </div>
+
+                <div class="banner">
+                    <div class="container">
+                        <div class="banner-content">
+                            <div class="banner-left">
+                                <div class="content-wrapper">
+                                    <h1 class="banner-title">Bienvenue sur la plateforme !</h1>
+                                    <p class="text text-white">Gestion Clinique est une application intuitive et performante conçue pour simplifier la gestion des patients, médecins, dossiers médicaux, prescriptions, des rendez-vous,des notifications et des suivis des patients. Développée avec la technologie SOAP et REST, cette plateforme garantit une communication fiable et standardisée entre les différents services, tout en assurant la sécurité et l'intégrité des données.</p>
+                                    <a href = "#sc-services" class="btn btn-light" style="font-weight:bold!important;color:black!important;">Commencer la Gestion des Médecins !</a>
+                                </div>
+                            </div>
+
+                            <div class = "banner-right d-flex align-items-center justify-content-end">
+                                <img src = "assets/images/banner-image.png" alt = "">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- end of header -->
+
+            <main>
+                <section class = "sc-services" id="sc-services">
+                    <div class = "services-shape">
+                        <img src = "assets/images/curve-shape-1.png" alt = "">
+                    </div>
+                    <div class="container">
+                        <div class = "services-content">
+                            <div class="title-box text-center">
+                                <div class = "content-wrapper">
+                                    <h3 class = "title-box-name">Gestions des Médecins</h3>
+                                    <div class = "title-separator mx-auto"></div>
+                                   
+                                </div>
+                            </div>
+
+                            
+
+
+                                <!-- Section: Gestion des Médecins -->
+        <section>
+          
+            <form id="createMedecinForm">
+                <label for="medecinNom">Nom:</label>
+                <input type="text" id="medecinNom" required>
+                <label for="medecinPrenom">Prénom:</label>
+                <input type="text" id="medecinPrenom" required>
+                <label for="medecinSpecialite">Spécialité:</label>
+                <input type="text" id="medecinSpecialite" required>
+                <label for="medecinEmail">Email:</label>
+                <input type="email" id="medecinEmail" required>
+                <button class="alert alert-success" style="font-weight:bold;" type="submit">Ajouter Médecin</button>
+            </form>
+
+            <form id="updateMedecinForm">
+                <label for="updateMedecinId">Médecin ID:</label>
+                <input type="number" id="updateMedecinId" required>
+                <label for="newMedecinNom">Nouveau Nom:</label>
+                <input type="text" id="newMedecinNom" required>
+                <label for="newMedecinPrenom">Nouveau Prénom:</label>
+                <input type="text" id="newMedecinPrenom" required>
+                <label for="newMedecinSpecialite">Nouvelle Spécialité:</label>
+                <input type="text" id="newMedecinSpecialite" required>
+                <label for="newMedecinEmail">Nouvel Email:</label>
+                <input type="email" id="newMedecinEmail" required>
+                <button class="alert alert-info" style="font-weight:bold;" type="submit">Mettre à jour Médecin</button>
+            </form>
+
+            <form id="deleteMedecinForm">
+                <label for="deleteMedecinId">Médecin ID à supprimer:</label>
+                <input type="number" id="deleteMedecinId" required>
+                <button class="alert alert-danger" style="font-weight:bold;" type="submit">Supprimer Médecin</button>
+            </form>
+
+            <button class="alert alert-primary" style="font-weight:bold;" id="getAllMedecins">Afficher tous les médecins</button>
+
+
+
+            <pre class="alert alert-secondary" style="font-weight:bold;" id="medecinResult"></pre>
+        </section>
+
+                                
+
+
+                           
+
+                           
+                        </div>
+                    </div>
+                </section>
+
+        
+            </main>
+
+            <footer class = "footer" id="footer">
+                <div class = "container">
+                    <div class = "footer-content">
+                        <div class = "footer-list d-grid text-white">
+                            <div class = "footer-item">
+                                <a href = "#" class = "navbar-brand d-flex align-items-center">
+                                    <span class = "brand-shape d-inline-block text-white">GC</span>
+                                    <span class = "brand-text fw-7">Gestion Clinique</span>
+                                </a>
+                                <p class = "text-white">Gestion Clinique est une application intuitive et performante conçue pour simplifier la gestion des patients, médecins, dossiers médicaux, prescriptions, des rendez-vous,des notifications et des suivis des patients.</p>
+                                <p class = "text-white copyright-text">&copy; Gestion Clinique 2024. All rights reserved.</p>
+                            </div>
+
+                            <div class = "footer-item">
+                                <h3 class = "footer-item-title">Company</h3>
+                                <ul class = "footer-links">
+                                    <li><a href = "index.html">Home</a></li>
+                                    <li><a href = "index.html#sc-services">Services</a></li>
+                                   
+                                </ul>
+                            </div>
+
+                            <div class = "footer-item">
+                                <h3 class = "footer-item-title">Region</h3>
+                                <ul class = "footer-links">
+                                    <li><a >Rabat</a></li>
+                                    <li><a >Casa</a></li>
+                                    <li><a >Fes</a></li>
+                                    <li><a >Meknes</a></li>
+                                </ul>
+                            </div>
+
+                            <div class = "footer-item">
+                                <h3 class = "footer-item-title">Contact</h3>
+                                <ul class = "footer-links">
+                                    <li><a >+212 06 83 43 28 43</a></li>
+                                    <li><a >contact@gc.ma</a></li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class = "footer-element-1">
+                    <img src = "assets/images/element-img-4.png" alt = "">
+                </div>
+                <div class = "footer-element-2">
+                    <img src = "assets/images/element-img-5.png" alt = "">
+                </div>
+            </footer>
+        </div>
+        
+
+
+
+        <!-- jquery cdn -->
+        <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+        <!-- owl carousel -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- custom js -->
+        <script src = "assets/js/script.js"></script>
+        <script src = "script.js"></script>
+        <script>
+            // Gestion des Médecins
+document.getElementById("createMedecinForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const nom = document.getElementById("medecinNom").value;
+    const prenom = document.getElementById("medecinPrenom").value;
+    const specialite = document.getElementById("medecinSpecialite").value;
+    const email = document.getElementById("medecinEmail").value;
+
+    const soapRequest = `
+        <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://implementations.clinique.com/">
+           <soapenv:Body>
+              <tns:ajouterMedecin>
+                 <nom>${nom}</nom>
+                 <prenom>${prenom}</prenom>
+                 <specialite>${specialite}</specialite>
+                 <email>${email}</email>
+              </tns:ajouterMedecin>
+           </soapenv:Body>
+        </soapenv:Envelope>
+    `;
+    const result = await sendSoapRequest(endpoints.medecin, soapRequest);
+    document.getElementById("medecinResult").textContent = result;
+});
+
+// Modifier un médecin
+document.getElementById("updateMedecinForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const id = document.getElementById("updateMedecinId").value;
+    const nom = document.getElementById("newMedecinNom").value;
+    const prenom = document.getElementById("newMedecinPrenom").value;
+    const specialite = document.getElementById("newMedecinSpecialite").value;
+    const email = document.getElementById("newMedecinEmail").value;
+
+    const soapRequest = `
+        <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://implementations.clinique.com/">
+           <soapenv:Body>
+              <tns:modifierMedecin>
+                 <id>${id}</id>
+                 <nom>${nom}</nom>
+                 <prenom>${prenom}</prenom>
+                 <specialite>${specialite}</specialite>
+                 <email>${email}</email>
+              </tns:modifierMedecin>
+           </soapenv:Body>
+        </soapenv:Envelope>
+    `;
+    const result = await sendSoapRequest(endpoints.medecin, soapRequest);
+    document.getElementById("medecinResult").textContent = result;
+});
+
+// Supprimer un médecin
+document.getElementById("deleteMedecinForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const id = document.getElementById("deleteMedecinId").value;
+
+    const soapRequest = `
+        <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://implementations.clinique.com/">
+           <soapenv:Body>
+              <tns:supprimerMedecin>
+                 <id>${id}</id>
+              </tns:supprimerMedecin>
+           </soapenv:Body>
+        </soapenv:Envelope>
+    `;
+    const result = await sendSoapRequest(endpoints.medecin, soapRequest);
+    document.getElementById("medecinResult").textContent = result;
+});
+
+document.getElementById("getAllMedecins").addEventListener("click", async () => {
+    const soapRequest = `
+        <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://implementations.clinique.com/">
+            <soapenv:Body>
+                <tns:lireTousLesMedecins/>
+            </soapenv:Body>
+        </soapenv:Envelope>
+    `;
+    
+    const result = await sendSoapRequest(endpoints.medecin, soapRequest);
+    displayMedecins(result);
+});
+
+// Fonction pour afficher les médecins dans un tableau HTML
+function displayMedecins(soapResponse) {
+    const parser = new DOMParser();
+    const xmlDoc = parser.parseFromString(soapResponse, "text/xml");
+
+    const medecins = xmlDoc.getElementsByTagName("medecin");
+
+    if (medecins.length === 0) {
+        document.getElementById("medecinResult").innerHTML = "Aucun médecin trouvé.";
+        return;
+    }
+
+    let table = '<table class="table table-striped"><thead class="table-dark"><tr><th>ID</th><th>Nom</th><th>Prénom</th><th>Spécialité</th><th>Email</th></tr></thead>';
+    for (let i = 0; i < medecins.length; i++) {
+        let medecin = medecins[i];
+        let id = medecin.getElementsByTagName("id")[0].textContent;
+        let nom = medecin.getElementsByTagName("nom")[0].textContent;
+        let prenom = medecin.getElementsByTagName("prenom")[0].textContent;
+        let specialite = medecin.getElementsByTagName("specialite")[0].textContent;
+        let email = medecin.getElementsByTagName("email")[0].textContent;
+
+        table += `<tr><td>${id}</td><td>${nom}</td><td>${prenom}</td><td>${specialite}</td><td>${email}</td></tr>`;
+    }
+
+    table += "</table>";
+    document.getElementById("medecinResult").innerHTML = table;
+}
+        </script>
+
+
+    </body>
+</html>

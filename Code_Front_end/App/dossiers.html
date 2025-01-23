@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Gestion des Dossiers Médicaux</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <!-- font awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- owl carousel -->
+         
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- custom css -->
+         
+        <link rel = "stylesheet" href = "assets/css/main.css" />
+        <link rel = "stylesheet" href = "assets/css/utilities.css" />
+        <!-- normalize.css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+
+<style>
+
+input, button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+</style>
+
+
+
+    </head>
+    <body>
+        
+        <div class="page-wrapper">
+            <!-- header -->
+            <header class = "header">
+                <nav class = "navbar">
+                    <div class="container">
+                        <div class="navbar-content d-flex justify-content-between align-items-center">
+                            <div class = "brand-and-toggler d-flex align-items-center justify-content-between">
+                                <a href = "#" class = "navbar-brand d-flex align-items-center">
+                                    <span class="brand-shape d-inline-block text-white">GC</span>
+                                    <span class="brand-text fw-7">Gestion Clinique</span>
+                                </a>
+                                <button type = "button" class = "d-none navbar-show-btn">
+                                    <i class = "fas fa-bars"></i>
+                                </button>
+                            </div>
+
+                            <div class = "navbar-box">
+                                <button type = "button" class = "navbar-hide-btn">
+                                    <i class = "fas fa-times"></i>
+                                </button>
+
+                               
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class="element-one">
+                    <img src = "assets/images/element-img-1.png" alt = "">
+                </div>
+
+                <div class="banner">
+                    <div class="container">
+                        <div class="banner-content">
+                            <div class="banner-left">
+                                <div class="content-wrapper">
+                                    <h1 class="banner-title">Bienvenue sur la plateforme !</h1>
+                                    <p class="text text-white">Gestion Clinique est une application intuitive et performante conçue pour simplifier la gestion des patients, médecins, dossiers médicaux, prescriptions, des rendez-vous,des notifications et des suivis des patients. Développée avec la technologie SOAP et REST, cette plateforme garantit une communication fiable et standardisée entre les différents services, tout en assurant la sécurité et l'intégrité des données.</p>
+                                    <a href = "#sc-services" class="btn btn-light" style="font-weight:bold!important;color:black!important;">Commencer la Gestion des Dossiers Médicaux !</a>
+                                </div>
+                            </div>
+
+                            <div class = "banner-right d-flex align-items-center justify-content-end">
+                                <img src = "assets/images/banner-image.png" alt = "">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- end of header -->
+
+            <main>
+                <section class = "sc-services" id="sc-services">
+                    <div class = "services-shape">
+                        <img src = "assets/images/curve-shape-1.png" alt = "">
+                    </div>
+                    <div class="container">
+                        <div class = "services-content">
+                            <div class="title-box text-center">
+                                <div class = "content-wrapper">
+                                    <h3 class = "title-box-name">Gestions des Dossiers Médicaux</h3>
+                                    <div class = "title-separator mx-auto"></div>
+                                   
+                                </div>
+                            </div>
+
+                            
+
+
+                               <!-- Section: Gestion des Dossiers Médicaux -->
+                               <section>
+                                <!-- Formulaire pour créer un dossier -->
+                                <form id="createDossierForm">
+                                    <label for="createPatientId">Patient ID:</label>
+                                    <input type="number" id="createPatientId" required>
+                                    <button class="alert alert-success" style="font-weight:bold;" type="submit">Créer Dossier</button>
+                                </form>
+                            
+                                <!-- Formulaire pour afficher tous les dossiers -->
+                                <button class="alert alert-primary" style="font-weight:bold;" id="getAllDossiers">Afficher tous les dossiers</button>
+                            
+                                <!-- Formulaire pour supprimer un dossier -->
+                                <form id="deleteDossierForm">
+                                    <label for="deleteDossierId">Dossier ID à supprimer:</label>
+                                    <input type="number" id="deleteDossierId" required>
+                                    <button class="alert alert-danger" style="font-weight:bold;" type="submit">Supprimer Dossier</button>
+                                </form>
+                            
+                                <!-- Formulaire pour mettre à jour les prescriptions d'un dossier -->
+                                <form id="updateDossierPrescriptionsForm">
+                                    <label for="updateDossierId">Dossier ID:</label>
+                                    <input type="number" id="updateDossierId" required>
+                                    <label for="updatePrescriptionId">Prescription ID:</label>
+                                    <input type="number" id="updatePrescriptionId" required>
+                                    <label for="newPrescriptionDetails">Nouveaux Détails:</label>
+                                    <input type="text" id="newPrescriptionDetails" required>
+                                    <button class="alert alert-info" style="font-weight:bold;" type="submit">Mettre à jour Prescription</button>
+                                </form>
+                            
+                                <!-- Formulaire pour mettre à jour le rapport d'un dossier -->
+                                <form id="updateDossierRapportForm">
+                                    <label for="updateRapportDossierId">Dossier ID:</label>
+                                    <input type="number" id="updateRapportDossierId" required>
+                                    <label for="updateRapportId">Rapport ID:</label>
+                                    <input type="number" id="updateRapportId" required>
+                                    <label for="newRapportDetails">Nouveau Rapport:</label>
+                                    <input type="text" id="newRapportDetails" required>
+                                    <button class="alert alert-warning" style="font-weight:bold;" type="submit">Mettre à jour Rapport</button>
+                                </form>
+                            
+                                <!-- Formulaire pour créer un rapport -->
+                                <form id="createRapportForm">
+                                    <label for="createRapportDossierId">Dossier ID:</label>
+                                    <input type="number" id="createRapportDossierId" required>
+                                    <label for="createMedecinId">Médecin ID:</label>
+                                    <input type="number" id="createMedecinId" required>
+                                    <label for="createRapport">Rapport:</label>
+                                    <input type="text" id="createRapport" required>
+                                    <button class="alert alert-success" style="font-weight:bold;" type="submit">Créer Rapport</button>
+                                </form>
+                            
+                                <!-- Formulaire pour supprimer un rapport -->
+                                <form id="deleteRapportForm">
+                                    <label for="deleteRapportDossierId">Dossier ID:</label>
+                                    <input type="number" id="deleteRapportDossierId" required>
+                                    <label for="deleteRapportId">Rapport ID:</label>
+                                    <input type="number" id="deleteRapportId" required>
+                                    <button class="alert alert-danger" style="font-weight:bold;" type="submit">Supprimer Rapport</button>
+                                </form>
+                            
+                                <!-- Zone pour afficher le résultat -->
+                                <pre class="alert alert-secondary" style="font-weight:bold;" id="dossierResult"></pre>
+                            </section>
+                            
+                                
+
+
+                            
+
+                           
+                        </div>
+                    </div>
+                </section>
+
+        
+            </main>
+
+            <footer class = "footer" id="footer">
+                <div class = "container">
+                    <div class = "footer-content">
+                        <div class = "footer-list d-grid text-white">
+                            <div class = "footer-item">
+                                <a href = "#" class = "navbar-brand d-flex align-items-center">
+                                    <span class = "brand-shape d-inline-block text-white">GC</span>
+                                    <span class = "brand-text fw-7">Gestion Clinique</span>
+                                </a>
+                                <p class = "text-white">Gestion Clinique est une application intuitive et performante conçue pour simplifier la gestion des patients, médecins, dossiers médicaux, prescriptions, des rendez-vous,des notifications et des suivis des patients.</p>
+                                <p class = "text-white copyright-text">&copy; Gestion Clinique 2024. All rights reserved.</p>
+                            </div>
+
+                            <div class = "footer-item">
+                                <h3 class = "footer-item-title">Company</h3>
+                                <ul class = "footer-links">
+                                    <li><a href = "index.html">Home</a></li>
+                                    <li><a href = "index.html#sc-services">Services</a></li>
+                                   
+                                </ul>
+                            </div>
+
+                            <div class = "footer-item">
+                                <h3 class = "footer-item-title">Region</h3>
+                                <ul class = "footer-links">
+                                    <li><a >Rabat</a></li>
+                                    <li><a >Casa</a></li>
+                                    <li><a >Fes</a></li>
+                                    <li><a >Meknes</a></li>
+                                </ul>
+                            </div>
+
+                            <div class = "footer-item">
+                                <h3 class = "footer-item-title">Contact</h3>
+                                <ul class = "footer-links">
+                                    <li><a >+212 06 83 43 28 43</a></li>
+                                    <li><a >contact@gc.ma</a></li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class = "footer-element-1">
+                    <img src = "assets/images/element-img-4.png" alt = "">
+                </div>
+                <div class = "footer-element-2">
+                    <img src = "assets/images/element-img-5.png" alt = "">
+                </div>
+            </footer>
+        </div>
+        
+
+
+
+        <!-- jquery cdn -->
+        <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+        <!-- owl carousel -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- custom js -->
+        <script src = "assets/js/script.js"></script>
+        <script src = "script.js"></script>
+        <script>
+        
+            // Créer un dossier
+            document.getElementById("createDossierForm").addEventListener("submit", async (e) => {
+                e.preventDefault();
+                const patientId = document.getElementById("createPatientId").value;
+        
+                const soapRequest = `
+                    <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://implementations.clinique.com/">
+                        <soapenv:Body>
+                            <tns:creerDossier>
+                                <patientId>${patientId}</patientId>
+                            </tns:creerDossier>
+                        </soapenv:Body>
+                    </soapenv:Envelope>
+                `;
+                const result = await sendSoapRequest(endpoints.dossier, soapRequest);
+                document.getElementById("dossierResult").textContent = result;
+            });
+        
+            // Afficher tous les dossiers
+            document.getElementById("getAllDossiers").addEventListener("click", async () => {
+                const soapRequest = `
+                    <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://implementations.clinique.com/">
+                        <soapenv:Body>
+                            <tns:lireTousLesDossiers/>
+                        </soapenv:Body>
+                    </soapenv:Envelope>
+                `;
+                const result = await sendSoapRequest(endpoints.dossier, soapRequest);
+                displayDossiers(result);
+            });
+        
+            // Supprimer un dossier
+            document.getElementById("deleteDossierForm").addEventListener("submit", async (e) => {
+                e.preventDefault();
+                const dossierId = document.getElementById("deleteDossierId").value;
+        
+                const soapRequest = `
+                    <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://implementations.clinique.com/">
+                        <soapenv:Body>
+                            <tns:supprimerDossier>
+                                <dossierId>${dossierId}</dossierId>
+                            </tns:supprimerDossier>
+                        </soapenv:Body>
+                    </soapenv:Envelope>
+                `;
+                const result = await sendSoapRequest(endpoints.dossier, soapRequest);
+                document.getElementById("dossierResult").textContent = result;
+            });
+        
+            // Mettre à jour une prescription dans un dossier
+            document.getElementById("updateDossierPrescriptionsForm").addEventListener("submit", async (e) => {
+                e.preventDefault();
+                const dossierId = document.getElementById("updateDossierId").value;
+                const prescriptionId = document.getElementById("updatePrescriptionId").value;
+                const details = document.getElementById("newPrescriptionDetails").value;
+        
+                const soapRequest = `
+                    <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://implementations.clinique.com/">
+                        <soapenv:Body>
+                            <tns:mettreAJourDossierPrescriptions>
+                                <dossierId>${dossierId}</dossierId>
+                                <idPrescription>${prescriptionId}</idPrescription>
+                                <nouveauDetails>${details}</nouveauDetails>
+                            </tns:mettreAJourDossierPrescriptions>
+                        </soapenv:Body>
+                    </soapenv:Envelope>
+                `;
+                const result = await sendSoapRequest(endpoints.dossier, soapRequest);
+                document.getElementById("dossierResult").textContent = result;
+            });
+        
+            // Mettre à jour un rapport dans un dossier
+            document.getElementById("updateDossierRapportForm").addEventListener("submit", async (e) => {
+                e.preventDefault();
+                const dossierId = document.getElementById("updateRapportDossierId").value;
+                const rapportId = document.getElementById("updateRapportId").value;
+                const details = document.getElementById("newRapportDetails").value;
+        
+                const soapRequest = `
+                    <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://implementations.clinique.com/">
+                        <soapenv:Body>
+                            <tns:mettreAJourDossierRapport>
+                                <dossierId>${dossierId}</dossierId>
+                                <idRapport>${rapportId}</idRapport>
+                                <nouveauRapport>${details}</nouveauRapport>
+                            </tns:mettreAJourDossierRapport>
+                        </soapenv:Body>
+                    </soapenv:Envelope>
+                `;
+                const result = await sendSoapRequest(endpoints.dossier, soapRequest);
+                document.getElementById("dossierResult").textContent = result;
+            });
+        
+            // Créer un rapport
+            document.getElementById("createRapportForm").addEventListener("submit", async (e) => {
+                e.preventDefault();
+                const dossierId = document.getElementById("createRapportDossierId").value;
+                const medecinId = document.getElementById("createMedecinId").value;
+                const rapport = document.getElementById("createRapport").value;
+        
+                const soapRequest = `
+                    <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://implementations.clinique.com/">
+                        <soapenv:Body>
+                            <tns:creerRapport>
+                                <dossierId>${dossierId}</dossierId>
+                                <idMedecin>${medecinId}</idMedecin>
+                                <rapport>${rapport}</rapport>
+                            </tns:creerRapport>
+                        </soapenv:Body>
+                    </soapenv:Envelope>
+                `;
+                const result = await sendSoapRequest(endpoints.dossier, soapRequest);
+                document.getElementById("dossierResult").textContent = result;
+            });
+        
+            // Supprimer un rapport
+            document.getElementById("deleteRapportForm").addEventListener("submit", async (e) => {
+                e.preventDefault();
+                const dossierId = document.getElementById("deleteRapportDossierId").value;
+                const rapportId = document.getElementById("deleteRapportId").value;
+        
+                const soapRequest = `
+                    <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://implementations.clinique.com/">
+                        <soapenv:Body>
+                            <tns:supprimerRapport>
+                                <dossierId>${dossierId}</dossierId>
+                                <idRapport>${rapportId}</idRapport>
+                            </tns:supprimerRapport>
+                        </soapenv:Body>
+                    </soapenv:Envelope>
+                `;
+                const result = await sendSoapRequest(endpoints.dossier, soapRequest);
+                document.getElementById("dossierResult").textContent = result;
+            });
+        
+
+
+            // Fonction pour afficher les dossiers dans un tableau
+function displayDossiers(soapResponse) {
+    const parser = new DOMParser();
+    const xmlDoc = parser.parseFromString(soapResponse, "text/xml");
+
+    const dossiers = xmlDoc.getElementsByTagName("dossier");
+
+    if (dossiers.length === 0) {
+        document.getElementById("dossierResult").innerHTML = "Aucun dossier trouvé.";
+        return;
+    }
+
+    let table = '<table class="table table-striped"><thead class="table-dark"><th>ID du Dossier</th><th>Patient</th><th>Prescriptions</th><th>Rapports</th></thead>';
+
+    for (let i = 0; i < dossiers.length; i++) {
+        const dossier = dossiers[i];
+
+        // Récupérer les informations du dossier
+        const id = dossier.getElementsByTagName("id")[0].textContent;
+        const patientId = dossier.getElementsByTagName("patientId")[0].textContent;
+        const patientNom = dossier.getElementsByTagName("patientNom")[0]?.textContent || "Inconnu";
+        const patientPrenom = dossier.getElementsByTagName("patientPrenom")[0]?.textContent || "Inconnu";
+        const patientEmail = dossier.getElementsByTagName("patientEmail")[0]?.textContent || "Inconnu";
+
+        // Récupérer les prescriptions du dossier
+        const prescriptions = dossier.getElementsByTagName("prescription");
+        let prescriptionsDetails = "";
+        if (prescriptions.length > 0) {
+            prescriptionsDetails = "<ul>";
+            for (let j = 0; j < prescriptions.length; j++) {
+                const prescription = prescriptions[j];
+                const prescriptionId = prescription.getElementsByTagName("id")[0].textContent;
+                const prescriptionMedecinId = prescription.getElementsByTagName("medecinId")[0]?.textContent || "Inconnu";
+                const prescriptionDetails = prescription.getElementsByTagName("details")[0]?.textContent || "N/A";
+                prescriptionsDetails += `<li>ID: ${prescriptionId}, Médecin ID: ${prescriptionMedecinId}, Détails: ${prescriptionDetails}</li>`;
+            }
+            prescriptionsDetails += "</ul>";
+        } else {
+            prescriptionsDetails = "Aucune prescription";
+        }
+
+        // Récupérer les rapports du dossier
+        const rapports = dossier.getElementsByTagName("rapport");
+        let rapportsDetails = "";
+        if (rapports.length > 0) {
+            rapportsDetails = "<ul>";
+            for (let j = 0; j < rapports.length; j++) {
+                const rapport = rapports[j];
+                const rapportId = rapport.getElementsByTagName("id")[0].textContent;
+                const rapportMedecinId = rapport.getElementsByTagName("medecinId")[0]?.textContent || "Inconnu";
+                const rapportContenu = rapport.getElementsByTagName("rapportDetails")[0]?.textContent || "N/A";
+                rapportsDetails += `<li>ID: ${rapportId}, Médecin ID: ${rapportMedecinId}, Rapport: ${rapportContenu}</li>`;
+            }
+            rapportsDetails += "</ul>";
+        } else {
+            rapportsDetails = "Aucun rapport";
+        }
+
+        // Ajouter les informations dans le tableau
+        table += `
+            <tr>
+                <td>${id}</td>
+                <td>${patientId} - ${patientNom} ${patientPrenom} (${patientEmail})</td>
+                <td>${prescriptionsDetails}</td>
+                <td>${rapportsDetails}</td>
+            </tr>
+        `;
+    }
+
+    table += "</table>";
+    document.getElementById("dossierResult").innerHTML = table;
+}
+
+        </script>
+        
+
+
+    </body>
+</html>
